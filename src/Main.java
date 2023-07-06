@@ -47,6 +47,7 @@ class Solution {
         // i assumed x,y ordering...
         // it seems the first bracket [] indiactes # of rows and second indicates # of columns, so effectievly to coordinates
         // are y,x. for which row, then which column
+        // dario says i can eithr have rows of columns or columns of rows. not sure how though
 
         if( i[h][v] != pc ) return;  // pc is stored pixel color. if coordinate isn't same , then return
         i[h][v] = fc; // change color of coordinate to fill color
@@ -54,6 +55,6 @@ class Solution {
         move( i , h , v + 1 , fc , pc ); // moves down
         move( i , h - 1 , v , fc , pc ); // moves left
         move( i , h + 1 , v , fc , pc ); // moves right
-        move( i , h , v - 1 , fc , pc ); // moves up
+        move( i , h , v - 1 , fc , pc ); // moves up.
     }
 }
